@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Host
+Host: https://audacieux-realestate.com
+
+# Sitemaps
+Sitemap: https://audacieux-realestate.com/sitemap.xml
