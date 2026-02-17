@@ -49,6 +49,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Favicon using logo.png */}
+        <link rel="icon" type="image/png" href="/logo.png" />
           {/* Google Analytics */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8DN2PH6HY"></script>
           <script
