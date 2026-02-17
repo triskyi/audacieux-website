@@ -102,9 +102,9 @@ export default function RentCostsKigali2026() {
                   <table className="w-full text-left">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-4 py-3 font-semibold">Neighborhood</th>
-                        <th className="px-4 py-3 font-semibold">Price Range (Monthly)</th>
-                        <th className="px-4 py-3 font-semibold">Typical Features</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Neighborhood</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Monthly Rent</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Typical Features</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
@@ -141,29 +141,29 @@ export default function RentCostsKigali2026() {
                   <table className="w-full text-left">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-4 py-3 font-semibold">Neighborhood</th>
-                        <th className="px-4 py-3 font-semibold">Price Range (Monthly)</th>
-                        <th className="px-4 py-3 font-semibold">Average Size</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Neighborhood</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Price Range (Monthly)</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Average Size</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       <tr>
-                        <td className="px-4 py-3 font-medium">Kacyiru</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Kacyiru</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">400,000 - 650,000 RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">60-80 sqm</td>
                       </tr>
                       <tr className="bg-green-50">
-                        <td className="px-4 py-3 font-medium">Kimironko ⭐</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Kimironko ⭐</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">250,000 - 400,000 RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">50-70 sqm</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Remera</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Remera</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">300,000 - 500,000 RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">55-75 sqm</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Gacuriro</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Gacuriro</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">280,000 - 450,000 RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">60-80 sqm</td>
                       </tr>
@@ -181,29 +181,29 @@ export default function RentCostsKigali2026() {
                   <table className="w-full text-left">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-4 py-3 font-semibold">Neighborhood</th>
-                        <th className="px-4 py-3 font-semibold">Price Range (Monthly)</th>
-                        <th className="px-4 py-3 font-semibold">Features</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Neighborhood</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Price Range (Monthly)</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Features</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       <tr>
-                        <td className="px-4 py-3 font-medium">Nyarutarama</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Nyarutarama</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">800,000 - 1,500,000 RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Fully furnished, pool, gym</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Kacyiru</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Kacyiru</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">600,000 - 950,000 RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Modern, secure compound</td>
                       </tr>
                       <tr className="bg-green-50">
-                        <td className="px-4 py-3 font-medium">Kimironko ⭐</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Kimironko ⭐</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">400,000 - 700,000 RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Parking, water, security</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Gisozi</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Gisozi</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">350,000 - 550,000 RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Basic, good transport links</td>
                       </tr>
@@ -220,29 +220,29 @@ export default function RentCostsKigali2026() {
                   <table className="w-full text-left">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-4 py-3 font-semibold">Neighborhood</th>
-                        <th className="px-4 py-3 font-semibold">Price Range (Monthly)</th>
-                        <th className="px-4 py-3 font-semibold">Typical Amenities</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Neighborhood</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Price Range (Monthly)</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Typical Amenities</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       <tr>
-                        <td className="px-4 py-3 font-medium">Nyarutarama</td>
-                        <td className="px-4 py-3 text-[#0d4f3a] font-bold">1,500,000 - 3,000,000 RWF</td>
-                        <td className="px-4 py-3 text-sm text-gray-600">Pool, garden, staff quarters</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Nyarutarama</td>
+                        <td className="px-4 py-3 text-[#0d4f3a] font-bold">200,000 - 250,000 RWF</td>
+                        <td className="px-4 py-3 text-sm text-gray-600">Modern, generator backup</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Kacyiru</td>
-                        <td className="px-4 py-3 text-[#0d4f3a] font-bold">1,000,000 - 1,800,000 RWF</td>
-                        <td className="px-4 py-3 text-sm text-gray-600">Gated, parking, modern</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Kacyiru</td>
+                        <td className="px-4 py-3 text-[#0d4f3a] font-bold">180,000 - 230,000 RWF</td>
+                        <td className="px-4 py-3 text-sm text-gray-600">Secure, furnished options</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Kimironko</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Kimironko</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">600,000 - 1,200,000 RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Garden, parking, 2 baths</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Gacuriro</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Gacuriro</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">700,000 - 1,100,000 RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Quiet, family-friendly</td>
                       </tr>

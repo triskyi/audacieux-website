@@ -54,22 +54,22 @@ export default function Contact() {
                 <input 
                   type="text" 
                   placeholder="Your Name" 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a]"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a] text-gray-900 placeholder:text-gray-400"
                 />
                 <input 
                   type="email" 
                   placeholder="Your Email" 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a]"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a] text-gray-900 placeholder:text-gray-400"
                 />
                 <input 
                   type="tel" 
                   placeholder="Your Phone" 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a]"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a] text-gray-900 placeholder:text-gray-400"
                 />
                 <textarea 
                   placeholder="Your Message" 
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a]"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a] text-gray-900 placeholder:text-gray-400"
                 ></textarea>
                 <button 
                   type="submit" 

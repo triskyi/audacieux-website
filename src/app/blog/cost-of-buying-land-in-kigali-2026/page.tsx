@@ -100,24 +100,24 @@ export default function CostOfBuyingLandInKigali() {
                   <table className="w-full text-left">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-4 py-3 font-semibold">Neighborhood</th>
-                        <th className="px-4 py-3 font-semibold">Price Range</th>
-                        <th className="px-4 py-3 font-semibold">Market Status</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Neighborhood</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Price Range</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Market Status</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       <tr>
-                        <td className="px-4 py-3 font-medium">Nyarutarama</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Nyarutarama</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">80M - 200M RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">High demand, limited supply</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Kacyiru</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Kacyiru</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">60M - 150M RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Government district, stable</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Kibagabaga</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Kibagabaga</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">50M - 130M RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Near KIA, rising fast</td>
                       </tr>
@@ -132,26 +132,26 @@ export default function CostOfBuyingLandInKigali() {
                   <table className="w-full text-left">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-4 py-3 font-semibold">Neighborhood</th>
-                        <th className="px-4 py-3 font-semibold">Price Range</th>
-                        <th className="px-4 py-3 font-semibold">Investment Rating</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Neighborhood</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Price Range</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Investment Rating</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       <tr className="bg-green-50">
-                        <td className="px-4 py-3 font-medium">Kimironko ⭐</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Kimironko ⭐</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">40M - 120M RWF</td>
                         <td className="px-4 py-3 text-sm">
                           <span className="bg-green-600 text-white px-2 py-1 rounded">Excellent</span>
                         </td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Remera</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Remera</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">45M - 110M RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Very good, commercial hub</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Gacuriro</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Gacuriro</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">40M - 90M RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Growing, good potential</td>
                       </tr>
@@ -167,26 +167,26 @@ export default function CostOfBuyingLandInKigali() {
                   <table className="w-full text-left">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-4 py-3 font-semibold">Neighborhood</th>
-                        <th className="px-4 py-3 font-semibold">Price Range</th>
-                        <th className="px-4 py-3 font-semibold">Growth Potential</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Neighborhood</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Price Range</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Growth Potential</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       <tr>
-                        <td className="px-4 py-3 font-medium">Gisozi</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Gisozi</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">30M - 70M RWF</td>
                         <td className="px-4 py-3 text-sm">
                           <span className="bg-yellow-500 text-white px-2 py-1 rounded">High</span>
                         </td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Batsinda</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Batsinda</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">25M - 60M RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Infrastructure expanding</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Masaka</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Masaka</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">20M - 50M RWF</td>
                         <td className="px-4 py-3 text-sm text-gray-600">Long-term investment</td>
                       </tr>
@@ -320,28 +320,28 @@ export default function CostOfBuyingLandInKigali() {
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   <tr className="bg-white">
-                    <td className="px-4 py-3 font-medium">Registration Fee</td>
-                    <td className="px-4 py-3">4% of land value</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Registration Fee</td>
+                    <td className="px-4 py-3 text-gray-700">4% of land value</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">2,000,000 RWF</td>
                   </tr>
                   <tr className="bg-gray-50">
-                    <td className="px-4 py-3 font-medium">Transfer Tax</td>
-                    <td className="px-4 py-3">~6% of land value</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Transfer Tax</td>
+                    <td className="px-4 py-3 text-gray-700">~6% of land value</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">3,000,000 RWF</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="px-4 py-3 font-medium">Agent Commission</td>
-                    <td className="px-4 py-3">5% of land value</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Agent Commission</td>
+                    <td className="px-4 py-3 text-gray-700">5% of land value</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">2,500,000 RWF</td>
                   </tr>
                   <tr className="bg-gray-50">
-                    <td className="px-4 py-3 font-medium">Legal Fees</td>
-                    <td className="px-4 py-3">1-2% of land value</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Legal Fees</td>
+                    <td className="px-4 py-3 text-gray-700">1-2% of land value</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">500,000-1,000,000 RWF</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="px-4 py-3 font-medium">Land Survey</td>
-                    <td className="px-4 py-3">Fixed cost</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Land Survey</td>
+                    <td className="px-4 py-3 text-gray-700">Fixed cost</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">300,000-500,000 RWF</td>
                   </tr>
                   <tr className="bg-gray-50">
