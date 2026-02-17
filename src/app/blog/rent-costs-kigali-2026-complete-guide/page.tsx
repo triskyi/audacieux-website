@@ -259,24 +259,24 @@ export default function RentCostsKigali2026() {
                   <table className="w-full text-left">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th className="px-4 py-3 font-semibold">Location</th>
-                        <th className="px-4 py-3 font-semibold">Price per SQM (Monthly)</th>
-                        <th className="px-4 py-3 font-semibold">Sample Price (100sqm)</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Location</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Price per SQM (Monthly)</th>
+                        <th className="px-4 py-3 font-semibold text-gray-900">Sample Price (100sqm)</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       <tr>
-                        <td className="px-4 py-3 font-medium">CBD (City Center)</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">CBD (City Center)</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">15,000 - 25,000 RWF/sqm</td>
                         <td className="px-4 py-3 text-sm text-gray-600">1,500,000 - 2,500,000 RWF</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Kacyiru (Near Ministries)</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Kacyiru (Near Ministries)</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">12,000 - 20,000 RWF/sqm</td>
                         <td className="px-4 py-3 text-sm text-gray-600">1,200,000 - 2,000,000 RWF</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-3 font-medium">Remera/Kimironko</td>
+                        <td className="px-4 py-3 font-medium text-gray-900">Remera/Kimironko</td>
                         <td className="px-4 py-3 text-[#0d4f3a] font-bold">8,000 - 15,000 RWF/sqm</td>
                         <td className="px-4 py-3 text-sm text-gray-600">800,000 - 1,500,000 RWF</td>
                       </tr>
@@ -310,32 +310,32 @@ export default function RentCostsKigali2026() {
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   <tr className="bg-white">
-                    <td className="px-4 py-3 font-medium">Electricity (EUCL)</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Electricity (EUCL)</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">30,000 - 80,000 RWF</td>
                     <td className="px-4 py-3 text-sm text-gray-600">Depends on usage, AC increases cost</td>
                   </tr>
                   <tr className="bg-gray-50">
-                    <td className="px-4 py-3 font-medium">Water (WASAC)</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Water (WASAC)</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">10,000 - 25,000 RWF</td>
                     <td className="px-4 py-3 text-sm text-gray-600">Sometimes included in rent</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="px-4 py-3 font-medium">Internet/WiFi</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Internet/WiFi</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">30,000 - 50,000 RWF</td>
                     <td className="px-4 py-3 text-sm text-gray-600">30 Mbps average</td>
                   </tr>
                   <tr className="bg-gray-50">
-                    <td className="px-4 py-3 font-medium">Security/Cleaning (Compound)</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Security/Cleaning (Compound)</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">10,000 - 20,000 RWF</td>
                     <td className="px-4 py-3 text-sm text-gray-600">Shared compound costs</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="px-4 py-3 font-medium">Gas/Cooking Fuel</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Gas/Cooking Fuel</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">15,000 - 30,000 RWF</td>
                     <td className="px-4 py-3 text-sm text-gray-600">Gas cylinder refills</td>
                   </tr>
                   <tr className="bg-gray-50">
-                    <td className="px-4 py-3 font-medium">Waste Collection</td>
+                    <td className="px-4 py-3 font-medium text-gray-900">Waste Collection</td>
                     <td className="px-4 py-3 text-[#0d4f3a] font-bold">3,000 - 5,000 RWF</td>
                     <td className="px-4 py-3 text-sm text-gray-600">Monthly fee</td>
                   </tr>
