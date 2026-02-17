@@ -1,9 +1,19 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-[#0a3d2d] text-white py-8">
       <div className="container mx-auto px-4 text-center">
+        <div className="flex justify-center mb-4">
+          <Image 
+            src="/logo.png" 
+            alt="Audacieux Real Estate Logo" 
+            width={60}
+            height={60}
+            className="object-contain"
+          />
+        </div>
         <p className="mb-2">Follow us: <strong>audacieux_niyibikoze</strong></p>
         <div className="flex justify-center gap-4 mb-4">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-300 transition">

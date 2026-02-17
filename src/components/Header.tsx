@@ -3,6 +3,7 @@
 import { Home, Facebook, Twitter, Instagram, Linkedin, Menu, X, Phone, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -61,8 +62,15 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-14 h-14 bg-gradient-to-br from-[#0d4f3a] to-[#1a7a55] rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-              <Home className="text-white" size={28} />
+            <div className="relative w-14 h-14 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow">
+              <Image 
+                src="/logo.png" 
+                alt="Audacieux Real Estate Logo" 
+                width={56}
+                height={56}
+                className="object-contain"
+                priority
+              />
             </div>
             <div>
               <h1 className="text-2xl font-bold text-[#0d4f3a] tracking-tight">AUDACIEUX</h1>
