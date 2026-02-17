@@ -1,9 +1,9 @@
 import { Target, Award, Users, TrendingUp } from "lucide-react";
 
 export const metadata = {
-  title: "About Audacieux Real Estate Kimironko Kigali | Our Story",
-  description: "Audacieux Real Estate is a trusted property agency in Kimironko, Kigali, Rwanda. We help clients buy, sell and rent houses with professional service and up to 45% discount.",
-  keywords: ["real estate agency Kigali", "property agent Kimironko", "trusted real estate Rwanda"],
+  title: "About Audacieux Real Estate Rwanda | Operating Nationwide from Kimironko",
+  description: "Audacieux Real Estate operates across all Rwanda from our Kimironko office. We help clients buy, sell and rent properties in Kigali, Musanze, Rubavu and nationwide. Up to 45% discount.",
+  keywords: ["real estate agency Rwanda", "property agent nationwide Rwanda", "Audacieux Real Estate", "Kimironko office", "Rwanda property services"],
 };
 
 export default function AboutPage() {
@@ -32,19 +32,17 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                Welcome to Audacieux Real Estate, your trusted partner in finding the perfect property 
-                in Kigali and beyond. We are committed to helping you build your dreams and secure your 
-                future through exceptional real estate services.
+                Welcome to Audacieux Real Estate, Rwanda's premier property agency operating nationwide from our headquarters in Kimironko, Kigali. We are committed to helping Rwandans build their dreams and secure their future through exceptional real estate services across the entire country.
               </p>
               <p>
-                With years of experience in the Rwandan real estate market, we have built a reputation 
-                for integrity, professionalism, and customer satisfaction. Our team of dedicated experts 
+                With years of experience in the Rwandan real estate market, we've built a reputation 
+                for integrity, professionalism, and customer satisfaction across Kigali, Musanze, Rubavu, and all provinces. Our team of dedicated experts 
                 works tirelessly to match you with properties that not only meet your needs but exceed 
-                your expectations.
+                your expectations—whether you're in the capital or the countryside.
               </p>
               <p>
-                Whether you're looking to buy your first home, invest in commercial property, or find 
-                the perfect plot of land, Audacieux Real Estate is here to guide you every step of the way.
+                Based in Kimironko but serving all Rwanda, whether you're looking to buy your first home in Kigali, invest in commercial property in Huye, or find 
+                the perfect  plot of land in Musanze, Audacieux Real Estate is here to guide you every step of the way.
               </p>
             </div>
           </div>

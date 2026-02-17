@@ -19,49 +19,22 @@ export default function BlogPage() {
       image: "kimironko-guide"
     },
     {
-      slug: "cost-of-buying-land-kigali-2026",
-      title: "Cost of Buying Land in Kigali: Complete 2026 Price Guide",
-      excerpt: "Comprehensive breakdown of land prices across Kigali's neighborhoods, from affordable plots to premium locations. Expert insights on investment potential.",
+      slug: "cost-of-buying-land-in-kigali-2026",
+      title: "Cost of Buying Land in Kigali (2026 Complete Guide)",
+      excerpt: "Everything you need to know about land prices, neighborhoods, and the buying process in Rwanda's capital. From 30M to 200M RWF across all locations.",
       category: "Buying",
-      date: "February 8, 2026",
-      readTime: "10 min read",
+      date: "February 17, 2026",
+      readTime: "8 min read",
       image: "land-prices"
     },
     {
-      slug: "how-much-does-rent-cost-kigali",
-      title: "How Much Does Rent Cost in Kigali? 2026 Rental Market Analysis",
-      excerpt: "Average rental prices for apartments, houses, and villas in Kigali. Compare costs across different neighborhoods and property types.",
-      category: "Market Analysis",
-      date: "February 5, 2026",
-      readTime: "7 min read",
+      slug: "rent-costs-kigali-2026-complete-guide",
+      title: "Rent Costs in Kigali (2026 Complete Guide)",
+      excerpt: "Exactly how much you'll pay for apartments, houses, and offices in every neighborhood. From studios at 150K to executive villas at 3M RWF/month.",
+      category: "Renting",
+      date: "February 17, 2026",
+      readTime: "10 min read",
       image: "rental-costs"
-    },
-    {
-      slug: "apartment-prices-kimironko-kigali",
-      title: "Apartment Prices in Kimironko: What to Expect in 2026",
-      excerpt: "Detailed guide to apartment costs in Kimironko, from studio apartments to luxury penthouses. Includes negotiation tips and market forecasts.",
-      category: "Market Analysis",
-      date: "February 2, 2026",
-      readTime: "6 min read",
-      image: "apartments"
-    },
-    {
-      slug: "real-estate-investment-kigali-guide",
-      title: "Real Estate Investment in Kigali: Beginner's Guide 2026",
-      excerpt: "Learn how to invest in Kigali's booming real estate market. ROI potential, best locations, and strategies from experienced local investors.",
-      category: "Investment",
-      date: "January 28, 2026",
-      readTime: "12 min read",
-      image: "investment"
-    },
-    {
-      slug: "buying-house-kigali-first-time-buyer",
-      title: "Buying Your First House in Kigali: Step-by-Step Process",
-      excerpt: "Complete guide for first-time homebuyers in Rwanda. From property search to legal requirements and financing options.",
-      category: "Buying",
-      date: "January 25, 2026",
-      readTime: "9 min read",
-      image: "first-home"
     }
   ];
 

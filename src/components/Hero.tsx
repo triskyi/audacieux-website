@@ -8,11 +8,11 @@ export default function Hero() {
           loop 
           muted 
           playsInline
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-60"
         >
           <source src="/video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0d4f3a]/80 to-[#1a7a55]/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0d4f3a]/50 to-[#1a7a55]/50"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
