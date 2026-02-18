@@ -190,25 +190,25 @@ const ShortsAdminPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-black">Shorts Management</h2>
           <div className="flex gap-2 items-center w-full md:w-auto">
             <button
-              className="rounded-lg px-5 py-2 bg-gradient-to-r from-gray-300 to-gray-200 text-[#0d4f3a] font-bold shadow hover:from-gray-400 hover:to-gray-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 min-w-[160px]"
+              className="rounded px-3 py-1.5 bg-gradient-to-r from-gray-300 to-gray-200 text-[#0d4f3a] font-bold shadow hover:from-gray-400 hover:to-gray-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 min-w-[100px] text-sm"
               onClick={() => router.push('/admin')}
               type="button"
             >
-              ← Go Back to Admin
+              ← Go Back 
             </button>
             <input
               type="text"
               placeholder="Search by title, location, or type..."
               value={search}
               onChange={e => setSearch(e.target.value)}
-              className="input input-bordered text-black w-full md:w-64"
+              className="input input-bordered text-black w-full md:w-48 text-sm"
             />
             <button
-              className="rounded-lg px-5 py-2 bg-gradient-to-r from-[#0d4f3a] to-[#1a7a55] text-white font-bold shadow hover:from-[#1a7a55] hover:to-[#0d4f3a] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a] min-w-[160px]"
+              className="rounded px-3 py-1.5 bg-gradient-to-r from-[#0d4f3a] to-[#1a7a55] text-white font-bold shadow hover:from-[#1a7a55] hover:to-[#0d4f3a] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a] min-w-[100px] text-sm"
               onClick={() => setShowAddModal(true)}
               type="button"
             >
-              + Add Short
+              + Add new
             </button>
           </div>
         </div>

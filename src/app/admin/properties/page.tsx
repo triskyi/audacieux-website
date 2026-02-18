@@ -215,7 +215,7 @@ export default function ManageProperties() {
               onClick={() => router.push('/admin')}
               type="button"
             >
-              ← Go Back to Admin
+              ← Go Back
             </button>
             <input
               type="text"
@@ -227,7 +227,7 @@ export default function ManageProperties() {
             <button className="rounded-lg px-5 py-2 bg-gradient-to-r from-[#0d4f3a] to-[#1a7a55] text-white font-bold shadow hover:from-[#1a7a55] hover:to-[#0d4f3a] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#0d4f3a]"
               onClick={() => setShowAddModal(true)}
             >
-              + Add New Property
+              + Add New
             </button>
           </div>
         </div>
