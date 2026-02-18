@@ -12,6 +12,7 @@ export default function PropertiesPage() {
 
 
   const [properties, setProperties] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState("All Types");
   const [sortBy, setSortBy] = useState("featured");
@@ -19,7 +20,8 @@ export default function PropertiesPage() {
   useEffect(() => {
     fetch("/api/properties")
       .then((res) => res.json())
-      .then((data) => setProperties(data));
+      .then((data) => setProperties(data))
+      .finally(() => setLoading(false));
   }, []);
 
   const filteredProperties = useMemo(() => {
@@ -122,12 +124,43 @@ export default function PropertiesPage() {
             </select>
           </div>
 
-          {filteredProperties.length === 0 ? (
+          {loading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {Array.from({ length: 8 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="bg-white rounded-lg overflow-hidden shadow-md border border-gray-200 animate-pulse"
+                >
+                  <div className="relative h-48 bg-gray-200 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-gray-300 rounded-full" />
+                    <div className="absolute top-3 right-3 bg-yellow-200 text-yellow-700 px-3 py-1 rounded-full text-xs font-bold z-10 w-16 h-5" />
+                  </div>
+                  <div className="p-4">
+                    <div className="h-5 bg-gray-200 rounded w-1/3 mb-2" />
+                    <div className="h-6 bg-gray-200 rounded w-2/3 mb-2" />
+                    <div className="flex items-center mb-2">
+                      <div className="h-4 w-4 bg-gray-200 rounded mr-2" />
+                      <div className="h-4 bg-gray-200 rounded w-1/4" />
+                    </div>
+                    <div className="flex items-center mb-3">
+                      <div className="h-4 w-4 bg-gray-200 rounded mr-2" />
+                      <div className="h-4 bg-gray-200 rounded w-1/6" />
+                    </div>
+                    <div className="h-4 bg-gray-200 rounded w-full mb-2" />
+                    <div className="h-4 bg-gray-200 rounded w-5/6 mb-4" />
+                    <div className="pt-3 border-t border-gray-100">
+                      <div className="h-7 bg-gray-200 rounded w-1/2" />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : filteredProperties.length === 0 ? (
             <div className="text-center py-16">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-gray-800 mb-2">No properties found</h3>
               <p className="text-gray-600 mb-6">Try adjusting your search or filters</p>
-              <button 
+              <button
                 onClick={() => {
                   setSearchQuery("");
                   setSelectedType("All Types");
@@ -146,15 +179,18 @@ export default function PropertiesPage() {
                   className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-200"
                 >
                   {/* Property Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <PropertyImage type={property.type} alt={property.title} />
+                  <div className="relative h-48 overflow-hidden bg-gray-100 flex items-center justify-center">
+                    {property.image ? (
+                      <img src={property.image} alt={property.title} className="object-cover w-full h-full" />
+                    ) : (
+                      <PropertyImage type={property.type} alt={property.title} />
+                    )}
                     {property.featured && (
                       <div className="absolute top-3 right-3 bg-yellow-400 text-[#0d4f3a] px-3 py-1 rounded-full text-xs font-bold z-10">
                         Featured
                       </div>
                     )}
                   </div>
-
                   {/* Property Details */}
                   <div className="p-4">
                     <div className="mb-2">
@@ -162,21 +198,17 @@ export default function PropertiesPage() {
                         {property.type}
                       </span>
                     </div>
-
                     <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-1">
                       {property.title}
                     </h3>
-
                     <div className="flex items-center text-gray-600 mb-2 text-sm">
                       <MapPin size={14} className="mr-1 text-[#0d4f3a] flex-shrink-0" />
                       <span className="line-clamp-1">{property.location}</span>
                     </div>
-
                     <div className="flex items-center text-gray-600 mb-3 text-sm">
                       <Ruler size={14} className="mr-1 text-[#0d4f3a]" />
                       <span>{property.size}</span>
                     </div>
-
                     <div className="pt-3 border-t border-gray-200">
                       <p className="text-2xl font-bold text-[#0d4f3a]">
                         {formatPrice(property.price)}

@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import PublicShell from "@/components/PublicShell";
 import { generateSEO, generateRealEstateAgentSchema } from "@/lib/seo";
 
 const geistSans = Geist({
@@ -34,6 +32,7 @@ export const metadata: Metadata = generateSEO(
   ]
 );
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,26 +50,23 @@ export default function RootLayout({
         />
         {/* Favicon using logo.png */}
         <link rel="icon" type="image/png" href="/logo.png" />
-          {/* Google Analytics */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8DN2PH6HY"></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-F8DN2PH6HY');
-              `,
-            }}
-          />
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-F8DN2PH6HY"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-F8DN2PH6HY');
+            `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <Footer />
-        <WhatsAppButton />
+        <PublicShell>{children}</PublicShell>
       </body>
     </html>
   );
