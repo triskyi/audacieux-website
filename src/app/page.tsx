@@ -3,6 +3,7 @@ import Services from "@/components/Services";
 import PropertyShowcase from "@/components/PropertyShowcase";
 import Contact from "@/components/Contact";
 import FAQSection from "@/components/FAQSection";
+import ShortsSection from "@/components/ShortsSection";
 
 export default function HomePage() {
   const faqs = [
@@ -29,6 +30,7 @@ export default function HomePage() {
       <Hero />
       <Services />
       <PropertyShowcase />
+      <ShortsSection />
       <FAQSection faqs={faqs} title="Frequently Asked Questions" />
       <Contact />
     </div>
