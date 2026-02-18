@@ -1,14 +1,24 @@
+
+"use client";
 import { Home, Building2, Key, MapPin, Briefcase, Building } from "lucide-react";
+import React, { useEffect, useState } from "react";
+
+const iconMap: Record<string, any> = {
+  Home,
+  Building2,
+  Key,
+  MapPin,
+  Briefcase,
+  Building,
+};
 
 export default function Services() {
-  const services = [
-    { name: "House Selling", icon: Home },
-    { name: "Small House Renting (Ghetto)", icon: Building2 },
-    { name: "House Rental & Leasing", icon: Key },
-    { name: "Plot Selling", icon: MapPin },
-    { name: "Workplace (Office) Leasing", icon: Briefcase },
-    { name: "Apartment Leasing", icon: Building },
-  ];
+  const [services, setServices] = useState<any[]>([]);
+  useEffect(() => {
+    fetch("/api/services")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
 
   return (
     <section id="services" className="py-16 bg-gray-50">
@@ -21,12 +31,11 @@ export default function Services() {
             We offer comprehensive real estate solutions tailored to your needs
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {services.map((service, index) => {
-            const Icon = service.icon;
+            const Icon = iconMap[service.icon] || Home;
             return (
-              <div 
+              <div
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2 border-t-4 border-[#0d4f3a]"
               >

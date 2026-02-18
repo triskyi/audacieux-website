@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import PropertyShowcase from "@/components/PropertyShowcase";
+import  PropertyShowcase from "@/components/PropertyShowcase";
 import Contact from "@/components/Contact";
 import FAQSection from "@/components/FAQSection";
 import ShortsSection from "@/components/ShortsSection";

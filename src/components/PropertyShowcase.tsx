@@ -1,11 +1,17 @@
+"use client";
 import { MapPin, Ruler } from "lucide-react";
-import { properties, formatPrice } from "@/data/properties";
+import { useEffect, useState } from "react";
+import { formatPrice } from "@/data/properties";
 import PropertyImage from "./PropertyImage";
 import Link from "next/link";
 
 export default function PropertyShowcase() {
-  // Show only first 6 properties on home page
-  const featuredProperties = properties.slice(0, 6);
+  const [properties, setProperties] = useState<any[]>([]);
+  useEffect(() => {
+    fetch("/api/properties")
+      .then((res) => res.json())
+      .then((data) => setProperties(data.slice(0, 6)));
+  }, []);
 
   return (
     <section id="properties" className="py-16 bg-white">
@@ -18,7 +24,7 @@ export default function PropertyShowcase() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {featuredProperties.map((property) => (
+          {properties.map((property) => (
             <Link
               key={property.id}
               href={`/properties/${property.id}`}

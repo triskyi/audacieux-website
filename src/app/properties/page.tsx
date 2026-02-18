@@ -1,17 +1,27 @@
 "use client";
 
 import { MapPin, Ruler, Filter, Search } from "lucide-react";
-import { properties, formatPrice } from "@/data/properties";
+import { formatPrice } from "@/data/properties";
+import React, { useEffect, useState, useMemo } from "react";
+
 import PropertyImage from "@/components/PropertyImage";
 import Link from "next/link";
-import { useState, useMemo } from "react";
 
 export default function PropertiesPage() {
+
+
+
+  const [properties, setProperties] = useState<any[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState("All Types");
   const [sortBy, setSortBy] = useState("featured");
 
-  // Filter and sort properties
+  useEffect(() => {
+    fetch("/api/properties")
+      .then((res) => res.json())
+      .then((data) => setProperties(data));
+  }, []);
+
   const filteredProperties = useMemo(() => {
     let filtered = properties.filter((property) => {
       // Search filter
@@ -19,13 +29,10 @@ export default function PropertiesPage() {
         property.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         property.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
         property.type.toLowerCase().includes(searchQuery.toLowerCase());
-      
       // Type filter
       const matchesType = selectedType === "All Types" || property.type === selectedType;
-      
       return matchesSearch && matchesType;
     });
-
     // Sort
     switch (sortBy) {
       case "price-low":
@@ -40,9 +47,8 @@ export default function PropertiesPage() {
       default: // featured
         filtered = [...filtered].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
     }
-
     return filtered;
-  }, [searchQuery, selectedType, sortBy]);
+  }, [properties, searchQuery, selectedType, sortBy]);
 
   return (
     <div className="min-h-screen bg-gray-50">

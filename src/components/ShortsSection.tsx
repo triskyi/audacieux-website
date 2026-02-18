@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 interface ShortVideo {
   id: string;
   title: string;
-  videoUrl: string;
+  video: string;
 }
 
 
@@ -16,7 +16,13 @@ export default function HomeShortsSection() {
   useEffect(() => {
     fetch("/api/shorts")
       .then((res) => res.json())
-      .then((data) => setShorts(data));
+      .then((data) => {
+        // Map videoUrl to video for compatibility if needed
+        setShorts(data.map((s: any) => ({
+          ...s,
+          video: s.video || s.videoUrl || ""
+        })));
+      });
   }, []);
 
   return (
@@ -27,9 +33,9 @@ export default function HomeShortsSection() {
           {shorts.map((s) => (
             <li key={s.id} className="w-56 bg-white rounded-lg shadow p-3">
               <div className="mb-2 font-semibold">{s.title}</div>
-              <video width="200" controls src={s.videoUrl} style={{ display: s.videoUrl.endsWith('.mp4') ? 'block' : 'none' }} />
-              {s.videoUrl.includes('youtube') && (
-                <iframe width="200" height="120" src={s.videoUrl} title={s.title} allowFullScreen />
+              <video width="200" controls src={s.video} style={{ display: s.video && s.video.endsWith('.mp4') ? 'block' : 'none' }} />
+              {s.video && s.video.includes('youtube') && (
+                <iframe width="200" height="120" src={s.video} title={s.title} allowFullScreen />
               )}
             </li>
           ))}

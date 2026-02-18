@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 interface ShortVideo {
   id: string;
   title: string;
+  serviceType: string;
   type: string;
   location: string;
   price: number;
@@ -19,6 +20,7 @@ interface ShortVideo {
 const ShortsAdminPage: React.FC = () => {
   const [shorts, setShorts] = useState<ShortVideo[]>([]);
   const [form, setForm] = useState({
+    serviceType: 'HOUSE_SELLING',
     title: '',
     type: '',
     location: '',
@@ -76,7 +78,7 @@ const ShortsAdminPage: React.FC = () => {
     });
     const newShort = await res.json();
     setShorts([newShort, ...shorts]);
-    setForm({ title: '', type: '', location: '', price: '', size: '', featured: false, description: '' });
+    setForm({ serviceType: 'HOUSE_SELLING', title: '', type: '', location: '', price: '', size: '', featured: false, description: '' });
     setVideoFile(null);
     setVideoPreview(null);
     if (fileInputRef.current) fileInputRef.current.value = '';
@@ -84,40 +86,52 @@ const ShortsAdminPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10">
+    <div className="min-h-screen bg-gray-50 py-10 text-black">
       <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
-        <h2 className="text-2xl font-bold mb-6 text-center">Add New Short</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-black">Add New Short</h2>
         <form onSubmit={handleAdd} className="flex flex-col gap-4">
-          <input name="title" placeholder="Title" value={form.title} onChange={handleChange} required className="input input-bordered" />
-          <input name="type" placeholder="Type (optional)" value={form.type} onChange={handleChange} className="input input-bordered" />
-          <input name="location" placeholder="Location (optional)" value={form.location} onChange={handleChange} className="input input-bordered" />
-          <input name="price" placeholder="Price (optional)" value={form.price} onChange={handleChange} type="number" min="0" className="input input-bordered" />
-          <input name="size" placeholder="Size in m² (optional)" value={form.size} onChange={handleChange} className="input input-bordered" />
-          <textarea name="description" placeholder="Description (optional)" value={form.description} onChange={handleChange} className="textarea textarea-bordered" />
-          <label className="block">
-            <span className="block mb-1">Video File (mp4, max 100MB)</span>
-            <input ref={fileInputRef} type="file" accept="video/mp4" onChange={handleFileChange} className="file-input file-input-bordered w-full" required />
+          <label className="block text-black">
+            <span className="block mb-1 text-black">Service Type</span>
+            <select name="serviceType" value={form.serviceType} onChange={handleChange} className="input input-bordered text-black">
+              <option value="HOUSE_SELLING">House Selling</option>
+              <option value="SMALL_HOUSE_RENTING">Small House Renting (Ghetto)</option>
+              <option value="HOUSE_RENTAL_LEASING">House Rental & Leasing</option>
+              <option value="PLOT_SELLING">Plot Selling</option>
+              <option value="WORKPLACE_LEASING">Workplace (Office) Leasing</option>
+              <option value="APARTMENT_LEASING">Apartment Leasing</option>
+            </select>
+          </label>
+          <input name="title" placeholder="Title" value={form.title} onChange={handleChange} required className="input input-bordered text-black" />
+          <input name="type" placeholder="Type (optional)" value={form.type} onChange={handleChange} className="input input-bordered text-black" />
+          <input name="location" placeholder="Location (optional)" value={form.location} onChange={handleChange} className="input input-bordered text-black" />
+          <input name="price" placeholder="Price (optional)" value={form.price} onChange={handleChange} type="number" min="0" className="input input-bordered text-black" />
+          <input name="size" placeholder="Size in m² (optional)" value={form.size} onChange={handleChange} className="input input-bordered text-black" />
+          <textarea name="description" placeholder="Description (optional)" value={form.description} onChange={handleChange} className="textarea textarea-bordered text-black" />
+          <label className="block text-black">
+            <span className="block mb-1 text-black">Video File (mp4, max 100MB)</span>
+            <input ref={fileInputRef} type="file" accept="video/mp4" onChange={handleFileChange} className="file-input file-input-bordered w-full text-black" required />
           </label>
           {videoPreview && (
             <video src={videoPreview} controls width={320} className="rounded-lg border" />
           )}
-          <label className="flex items-center gap-2">
-            <input type="checkbox" name="featured" checked={form.featured} onChange={handleChange} /> Featured
+          <label className="flex items-center gap-2 text-black">
+            <input type="checkbox" name="featured" checked={form.featured} onChange={handleChange} className="text-black" /> Featured
           </label>
           <button type="submit" disabled={loading} className="btn btn-primary w-full">{loading ? 'Uploading...' : 'Add Short'}</button>
         </form>
       </div>
       <div className="max-w-3xl mx-auto mt-12">
-        <h3 className="text-xl font-bold mb-4">All Shorts</h3>
+        <h3 className="text-xl font-bold mb-4 text-black">All Shorts</h3>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {shorts.map((s) => (
-            <li key={s.id} className="bg-white rounded-lg shadow p-4 flex flex-col gap-2">
-              <div className="font-semibold text-lg">{s.title} {s.featured && <span className="text-yellow-500">★</span>}</div>
+            <li key={s.id} className="bg-white rounded-lg shadow p-4 flex flex-col gap-2 text-black">
+              <div className="font-semibold text-lg text-black">{s.title} {s.featured && <span className="text-yellow-500">★</span>}</div>
               {s.video && (
                 <video width="240" controls src={s.video} className="rounded border" />
               )}
-              <div className="text-sm text-gray-600">
+              <div className="text-sm text-black">
                 {s.type && <>Type: {s.type} <br /></>}
+                {s.serviceType && <>Service: {s.serviceType} <br /></>}
                 {s.location && <>Location: {s.location} <br /></>}
                 {s.price ? <>Price: {s.price} <br /></> : null}
                 {s.size && <>Size: {s.size} <br /></>}

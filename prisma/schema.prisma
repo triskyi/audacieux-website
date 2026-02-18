@@ -1,3 +1,18 @@
+enum ServiceType {
+  HOUSE_SELLING
+  SMALL_HOUSE_RENTING
+  HOUSE_RENTAL_LEASING
+  LAND_SELLING
+  WORKPLACE_LEASING
+  APARTMENT_LEASING
+}
+model Service {
+  id        String   @id @default(uuid())
+  name      String
+  icon      String
+  createdAt DateTime @default(now())
+}
+
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
@@ -23,6 +38,7 @@ model Property {
   size      String
   featured  Boolean @default(false)
   createdAt DateTime @default(now())
+  serviceType ServiceType @default(LAND_SELLING)
 }
 
 model Short {
@@ -36,4 +52,5 @@ model Short {
   featured    Boolean @default(false)
   description String?
   createdAt   DateTime @default(now())
+  serviceType ServiceType @default(LAND_SELLING)
 }
