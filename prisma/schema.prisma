@@ -1,11 +1,4 @@
-enum ServiceType {
-  HOUSE_SELLING
-  SMALL_HOUSE_RENTING
-  HOUSE_RENTAL_LEASING
-  LAND_SELLING
-  WORKPLACE_LEASING
-  APARTMENT_LEASING
-}
+
 model Service {
   id        String   @id @default(uuid())
   name      String
@@ -38,7 +31,8 @@ model Property {
   size      String
   featured  Boolean @default(false)
   createdAt DateTime @default(now())
-  serviceType ServiceType @default(LAND_SELLING)
+  serviceId String
+  service   Service  @relation(fields: [serviceId], references: [id], onDelete: SetNull)
 }
 
 model Short {
@@ -52,5 +46,14 @@ model Short {
   featured    Boolean @default(false)
   description String?
   createdAt   DateTime @default(now())
-  serviceType ServiceType @default(LAND_SELLING)
+  serviceId   String
+  service     Service  @relation(fields: [serviceId], references: [id], onDelete: SetNull)
+}
+model Service {
+  id        String   @id @default(uuid())
+  name      String
+  icon      String
+  createdAt DateTime @default(now())
+  properties Property[]
+  shorts     Short[]
 }
